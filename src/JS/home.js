@@ -298,7 +298,7 @@ const renderagentData = async (data) => {
 fetchApiData("/agentim", (data) => {
   renderagentData(data);
 });
-// Toggle the mobile menu visibility
+//
 function toggleBurgerMenu() {
   const burgerMenu = document.querySelector('.burger-menu');
   const mobileNav = document.querySelector('.mobile-nav');

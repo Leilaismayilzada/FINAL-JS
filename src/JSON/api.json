@@ -574,26 +574,6 @@
       "sustainableTitle": "Embracing a sustainable future",
       "sustainableContent": "The classes and uneasiness, his ticking service, what something it bear extended had sooner sort we're of one possible to found switching the him.",
       "sustainableImage": "https://cdn.prod.website-files.com/6704d32b156a64ece7cc9779/67091d608db09d20d0545518_67091d21e3b5f95fb3f72f04_d-blog-2.jpeg"
-    },
-    {
-      "id": "3",
-      "title": "Here’s how to decorate your new home from scratch",
-      "description": "This design have it in named overall there, of as parts ourselves, coast little mathematicians lay as know that in you help of get handout on he to tones would be we've the yet outfits century a the temple.",
-      "date": "August 20, 2024",
-      "readTime": "14 min read",
-      "authorName": "Albert Flores",
-      "authorRole": "Blog Writer",
-      "authorImage": "https://cdn.prod.website-files.com/6704d32b156a64ece7cc9779/67091bba6ca94b3d59b08a0d_blog-author.png",
-      "bannerImage": "https://cdn.prod.website-files.com/6704d32b156a64ece7cc9779/67092f6be0919123c08607b1_blog-banner-10.jpg",
-      "sectionTitle": "Understanding housing stocks",
-      "sectionContent": "Stay updated with the latest industry trends, learn from real-world case studies, and discover innovative approaches to grow your brand and reach your business goals.",
-      "sectionImage": "https://cdn.prod.website-files.com/6704d32b156a64ece7cc9779/67091d608db09d20d054551b_67091cdcc63ef691b7483c88_d-blog-1.jpeg",
-      "keyPrinciplesTitle": "Key principles of green building",
-      "keyPrinciplesContent": "Is easy movement them, for harder your a in duty the except when of interfaces had is screen state be accuse own set the creating how have him.",
-      "quote": "“Options it deeply, the is for and management-science days, such to a expecting was hungrier much one may for titles in original soon.”",
-      "sustainableTitle": "Embracing a sustainable future",
-      "sustainableContent": "The classes and uneasiness, his ticking service, what something it bear extended had sooner sort we're of one possible to found switching the him.",
-      "sustainableImage": "https://cdn.prod.website-files.com/6704d32b156a64ece7cc9779/67091d608db09d20d0545518_67091d21e3b5f95fb3f72f04_d-blog-2.jpeg"
     }
   ],
   "accordionData": [
@@ -1056,6 +1036,92 @@
       "experience":"20y",
       "Position":"Client relations manager",
       "Language":"English, Spanish"
+    }
+  ],
+  "third": [
+    {
+      "id": "1",
+      "image": "https://cdn.prod.website-files.com/6704d32b156a64ece7cc9779/67092ffb13d7a3c1a189b27e_blog-thumb-12-p-800.jpg",
+      "description": "Here’s how to decorate your new home from scratch",
+      "time": "August 20, 2024",
+      "clock": "14 min read"
+    },
+    {
+      "id": "2",
+      "image": "https://cdn.prod.website-files.com/6704d32b156a64ece7cc9779/67092f8dcaadf9e4eb92d372_blog-thumb-11-p-800.jpg",
+      "description": "Here’s how to decorate your new home from scratch",
+      "time": "August 20, 2024",
+      "clock": "14 min read"
+    },
+    {
+      "id": "3",
+      "image": "https://cdn.prod.website-files.com/6704d32b156a64ece7cc9779/67092f6513d7a3c1a18934c6_blog-thumb-10-p-800.jpg",
+      "description": "Here’s how to decorate your new home from scratch",
+      "time": "August 20, 2024",
+      "clock": "14 min read"
+    },
+    {
+      "id": "4",
+      "image": "https://cdn.prod.website-files.com/6704d32b156a64ece7cc9779/67092f43f2d735d9d2db9569_blog-thumb-9-p-800.jpg",
+      "description": "Here’s how to decorate your new home from scratch",
+      "time": "August 20, 2024",
+      "clock": "7 min read"
+    },
+    {
+      "id": "5",
+      "image": "https://cdn.prod.website-files.com/6704d32b156a64ece7cc9779/67092f1d2bf9d5ed6bba1101_blog-thumb-8-p-800.jpg",
+      "description": "Here’s how to decorate your new home from scratch",
+      "time": "August 20, 2024",
+      "clock": "11 min read"
+    },
+    {
+      "id": "6",
+      "image": "https://cdn.prod.website-files.com/6704d32b156a64ece7cc9779/67092f01c46395a457e8e089_blog-thumb-7-p-800.jpg",
+      "description": "Here’s how to decorate your new home from scratch",
+      "time": "August 20, 2024",
+      "clock": "14 min read"
+    },
+    {
+      "id": "7",
+      "image": "https://cdn.prod.website-files.com/6704d32b156a64ece7cc9779/67092ee3e10d20ecb69d6588_blog-thumb-6-p-800.jpg",
+      "description": "Here’s how to decorate your new home from scratch",
+      "time": "August 20, 2024",
+      "clock": "11 min read"
+    },
+    {
+      "id": "8",
+      "image": "https://cdn.prod.website-files.com/6704d32b156a64ece7cc9779/67092ec4a473904894ce3eac_blog-thumb-5-p-800.jpg",
+      "description": "Here’s how to decorate your new home from scratch",
+      "time": "August 20, 2024",
+      "clock": "14 min read"
+    },
+    {
+      "id": "9",
+      "image": "https://cdn.prod.website-files.com/6704d32b156a64ece7cc9779/67092ea66492b2c8a7e9fdc6_blog-thumb-4-p-800.jpg",
+      "description": "Here’s how to decorate your new home from scratch",
+      "time": "August 20, 2024",
+      "clock": "14 min read"
+    },
+    {
+      "id": "10",
+      "image": "https://cdn.prod.website-files.com/6704d32b156a64ece7cc9779/67092e7e623fe36ab328e63a_blog-thumb-3-p-800.jpg",
+      "description": "Here’s how to decorate your new home from scratch",
+      "time": "August 20, 2024",
+      "clock": "14 min read"
+    },
+    {
+      "id": "11",
+      "image": "https://cdn.prod.website-files.com/6704d32b156a64ece7cc9779/67092e569b0c2b80f343a526_blog-thumb-2-p-800.jpg",
+      "description": "Here’s how to decorate your new home from scratch",
+      "time": "August 20, 2024",
+      "clock": "14 min read"
+    },
+    {
+      "id": "12",
+      "image": "https://cdn.prod.website-files.com/6704d32b156a64ece7cc9779/67091c354e32bf02c2ff4876_blog-thumb-1-p-800.jpg",
+      "description": "Here’s how to decorate your new home from scratch",
+      "time": "August 20, 2024",
+      "clock": "14 min read"
     }
   ]
   
