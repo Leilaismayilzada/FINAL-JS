@@ -2055,7 +2055,8 @@ h6 {
     margin-top: 50px;
   }
   #commitment .commitment_right__text ul {
-    grid-template-columns: 1fr; /* Stack list items */
+    grid-template-columns: 1fr;
+    /* Stack list items */
     padding-left: 15px;
   }
   #commitment .commitment_left__img {
