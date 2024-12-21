@@ -504,93 +504,165 @@ if (FORM_TABLE_CREATE_SLIDER_ABOUTUS) {
         });
     }
   });
-}
-
-
-
-/////// EDIT AND DELETE HANDLING
-
-
-FORM_TABLE_BODY.addEventListener("click", (e) => {
- 
-  if (e.target && e.target.classList.contains("btn-action")) {
-    const row = e.target.closest("tr");
-    handleEdit(row);
-  }
-
-  // Delete Button 
-  if (e.target && e.target.classList.contains("btn-action1")) {
-    const row = e.target.closest("tr");
-    const index = row.children[0].textContent - 1;  
-    handleDelete(index); 
-  }
-});
-
-// Handle the Edit action
-const ProperEdit = (row) => {
-  const index = row.children[0].textContent - 1;  
-
-  const cells = row.children;  
-  document.querySelector("#top_desc").value = cells[2].textContent;
-  document.querySelector("#top_rent").value = cells[3].textContent;
-  document.querySelector("#bottom_desc").value = cells[4].textContent;
-  document.querySelector("#bottom_location").value = cells[5].textContent;
-  document.querySelector("#bottom_direction").value = cells[6].textContent;
-  document.querySelector("#bed_num").value = cells[7].textContent;
-  document.querySelector("#shower_num").value = cells[8].textContent;
-  document.querySelector("#car_num").value = cells[9].textContent;
-
-  FORM_CREATE_TABLE.setAttribute("data-edit-row", index);  
-  document.querySelector(".form-submit-btn").textContent = "Update";  
-};
-
-// Handle Delete action
-const handleca = (index) => {
-  if (confirm("Are you sure you want to delete this property?")) {
-    AxiosInstance.delete(`/property/${index}`).then(() => {
-      fetchApiData("/property", RenderFormData);
-    });
-  }
+}const handleEdit = (row) => {
+  const index = row.children[0].textContent - 1;
+  ProperEdit(row);
 };
 
 
-FORM_CREATE_TABLE.addEventListener("submit", (e) => {
-  e.preventDefault();
+// FORM_TABLE_BODY.addEventListener("click", (e) => {
+//   if (e.target && e.target.classList.contains("btn-action")) {
+//     const row = e.target.closest("tr");
+//     handleEdit(row);
+//   }
 
-  const index = FORM_CREATE_TABLE.getAttribute("data-edit-row");
-  const formData = new FormData(FORM_CREATE_TABLE);
+//   if (e.target && e.target.classList.contains("btn-action1")) {
+//     const row = e.target.closest("tr");
+//     const index = row.children[0].textContent - 1;
+//     handleca(index);
+//   }
+// });
 
-  const payload = {
-    image: "New Image", 
-    top_desc: formData.get("top_desc"),
-    top_rent: formData.get("top_rent"),
-    bottom_desc: formData.get("bottom_desc"),
-    bottom_location: formData.get("bottom_location"),
-    bottom_direction: formData.get("bottom_direction"),
-    bottom_bed_num: formData.get("bed_num"),
-    bottom_shower_num: formData.get("shower_num"),
-    bottom_car_num: formData.get("car_num"),
-  };
+// const ProperEdit = (row) => {
+//   const index = row.children[0].textContent - 1;
+//   const cells = row.children;
+//   document.querySelector("#top_desc").value = cells[2].textContent;
+//   document.querySelector("#top_rent").value = cells[3].textContent;
+//   document.querySelector("#bottom_desc").value = cells[4].textContent;
+//   document.querySelector("#bottom_location").value = cells[5].textContent;
+//   document.querySelector("#bottom_direction").value = cells[6].textContent;
+//   document.querySelector("#bed_num").value = cells[7].textContent;
+//   document.querySelector("#shower_num").value = cells[8].textContent;
+//   document.querySelector("#car_num").value = cells[9].textContent;
 
-  // If editing, send PUT request to update data
-  if (index !== null) {
-    AxiosInstance.put(`/property/${index}`, payload).then(() => {
-      fetchApiData("/property", RenderFormData);
-      resetForm();  
-    });
-  } else { 
-    AxiosInstance.post("/property", payload).then(() => {
-      fetchApiData("/property", RenderFormData);
-      resetForm(); 
-    });
-  }
-});
+//   FORM_CREATE_TABLE.setAttribute("data-edit-row", index);
+//   document.querySelector(".form-submit-btn").textContent = "Update";
+// };
 
+// const handleca = (index) => {
+//   if (confirm("Are you sure you want to delete this property?")) {
+//     AxiosInstance.delete(`/property/${index}`).then(() => {
+//       fetchApiData("/property", RenderFormData);
+//     });
+//   }
+// };
 
-const resetForm = () => {
-  FORM_CREATE_TABLE.reset(); 
-  FORM_CREATE_TABLE.removeAttribute("data-edit-row");  
-  document.querySelector(".form-submit-btn").textContent = "Add";  
-};
-/////////////
+// FORM_CREATE_TABLE.addEventListener("submit", (e) => {
+//   e.preventDefault();
 
+//   const index = FORM_CREATE_TABLE.getAttribute("data-edit-row");
+//   const formData = new FormData(FORM_CREATE_TABLE);
+
+//   const payload = {
+//     image: "New Image",
+//     top_desc: formData.get("top_desc"),
+//     top_rent: formData.get("top_rent"),
+//     bottom_desc: formData.get("bottom_desc"),
+//     bottom_location: formData.get("bottom_location"),
+//     bottom_direction: formData.get("bottom_direction"),
+//     bottom_bed_num: formData.get("bed_num"),
+//     bottom_shower_num: formData.get("shower_num"),
+//     bottom_car_num: formData.get("car_num"),
+//   };
+
+//   if (index !== null) {
+//     AxiosInstance.put(`/property/${index}`, payload).then(() => {
+//       fetchApiData("/property", RenderFormData);
+//       resetForm();
+//     });
+//   } else {
+//     AxiosInstance.post("/property", payload).then(() => {
+//       fetchApiData("/property", RenderFormData);
+//       resetForm();
+//     });
+//   }
+// });
+
+// const resetForm = () => {
+//   FORM_CREATE_TABLE.reset();
+//   FORM_CREATE_TABLE.removeAttribute("data-edit-row");
+//   document.querySelector(".form-submit-btn").textContent = "Add";
+// };
+
+// const categoryedit = (row) => {
+//   const categoryId = row.children[0].textContent;
+//   const cells = row.children;
+//   ProperEditCategory(categoryId, cells);
+// };
+
+// FORM_TABLE_BODY_CATEGORY.addEventListener("click", (e) => {
+//   if (e.target && e.target.classList.contains("btn-action")) {
+//     const row = e.target.closest("tr");
+//     categoryedit(row);
+//   }
+
+//   if (e.target && e.target.classList.contains("btn-action1")) {
+//     const row = e.target.closest("tr");
+//     const categoryId = row.children[0].textContent;
+//     handlecategory(categoryId);
+//   }
+// });
+
+// const ProperEditCategory = (categoryId, cells) => {
+//   document.querySelector("#top_desc").value = cells[2].textContent;
+//   document.querySelector("#top_rent").value = cells[3].textContent;
+
+//   FORM_CREATE_CATEGORY.setAttribute("data-edit-row", categoryId);
+//   document.querySelector(".form-submit-btn").textContent = "Update";
+// };
+
+// const handlecategory = (categoryId) => {
+//   if (confirm("Are you sure you want to delete this property?")) {
+//     AxiosInstance.delete(`/category/${categoryId}`).then(() => {
+//       fetchApiData("/category", RenderFormData);
+//     });
+//   }
+// };
+
+// FORM_CREATE_CATEGORY.addEventListener("submit", (e) => {
+//   e.preventDefault();
+
+//   const categoryId = FORM_CREATE_CATEGORY.getAttribute("data-edit-row");
+//   const formData = new FormData(FORM_CREATE_CATEGORY);
+
+//   const payload = {
+//     image: "New Image",
+//     img_name: formData.get("top_desc"),
+//     img_desc: formData.get("top_rent"),
+//   };
+
+//   if (categoryId !== null) {
+//     AxiosInstance.put(`/category/${categoryId}`, payload).then(() => {
+//       fetchApiData("/category", RenderFormData);
+//       resetCategory();
+//     });
+//   } else {
+//     AxiosInstance.post("/category", payload).then(() => {
+//       fetchApiData("/category", RenderFormData);
+//       resetCategory();
+//     });
+//   }
+// });
+
+// const resetCategory = () => {
+//   FORM_CREATE_CATEGORY.reset();
+//   FORM_CREATE_CATEGORY.removeAttribute("data-edit-row");
+//   document.querySelector(".form-submit-btn").textContent = "Add";
+// };
+
+// const renderCategories = (categories) => {
+//   const tableBody = document.querySelector("#Form_table_body_category");
+
+//   categories.forEach(category => {
+//     const row = document.createElement("tr");
+//     row.innerHTML = `
+//       <td>${category.id}</td>
+//       <td><img src="${category.image}" alt="${category.img_name}" width="50"></td>
+//       <td>${category.img_name}</td>
+//       <td>${category.img_desc}</td>
+//       <td><button class="btn-action">Edit</button></td>
+//       <td><button class="btn-action1">Delete</button></td>
+//     `;
+//     tableBody.appendChild(row);
+//   });
+// };
